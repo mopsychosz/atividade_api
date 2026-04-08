@@ -338,7 +338,8 @@ bash
 npm install
 npm start
 
-Depois disso, teste manualmente no Postman usando:
+#Depois disso, teste manualmente no Postman usando:
+
 GET http://localhost:3000/
 GET http://localhost:3000/api/me
 GET http://localhost:3000/api/data
