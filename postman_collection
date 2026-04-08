@@ -1,0 +1,190 @@
+{
+  "info": {
+    "name": "API cafeteria",
+    "_postman_id": "5d12f536-7f8d-4f90-bec0-atividade-aula-4",
+    "description": "Collection da atividade da aula 4 com GET, filtro e POST para a API de cafeteria.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    }
+  ],
+  "item": [
+    {
+      "name": "GET /",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/"
+      }
+    },
+    {
+      "name": "GET /api/me",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/me"
+      }
+    },
+    {
+      "name": "GET /api/data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/data"
+      }
+    },
+    {
+      "name": "GET /api/random",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/random"
+      }
+    },
+    {
+      "name": "GET /produtos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "GET /produtos?categoria=bebida_quente",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/produtos?categoria=bebida_quente"
+      }
+    },
+    {
+      "name": "GET /produtos?ordem=preco&direcao=asc",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/produtos?ordem=preco&direcao=asc"
+      }
+    },
+    {
+      "name": "GET /produtos?pagina=1&limite=2",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/produtos?pagina=1&limite=2"
+      }
+    },
+    {
+      "name": "GET /produtos/1",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/produtos/1"
+      }
+    },
+    {
+      "name": "POST 1 - café expresso",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"café expresso\",\n  \"categoria\": \"bebida_quente\",\n  \"preco\": 8,\n  \"estoque\": 50\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "POST 2 - cappuccino",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"cappuccino\",\n  \"categoria\": \"bebida_quente\",\n  \"preco\": 12,\n  \"estoque\": 30\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "POST 3 - pão de queijo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "content-type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"pão de queijo\",\n  \"categoria\": \"salgado\",\n  \"preco\": 6,\n  \"estoque\": 40\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "POST 4 - bolo de cenoura",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"bolo de Cenoura\",\n  \"categoria\": \"doce\",\n  \"preco\": 10,\n  \"estoque\": 15\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "POST 5 - frappuccino",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Frappuccino\",\n  \"categoria\": \"bebida_gelada\",\n  \"preco\": 18,\n  \"estoque\": 20\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    },
+    {
+      "name": "POST invalido",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"produto sem preco\",\n  \"categoria\": \"bebida_quente\"\n}"
+        },
+        "url": "{{baseUrl}}/api/produtos"
+      }
+    }
+  ]
+}
